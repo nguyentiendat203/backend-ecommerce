@@ -2,7 +2,9 @@ import 'dotenv/config'
 
 const dev = {
   app: {
-    port: process.env.LOCAL_DEV_APP_PORT
+    port: process.env.LOCAL_DEV_APP_PORT,
+    acess_token_secret: process.env.ACCESS_TOKEN_SECRET_KEY,
+    refresh_token_secret: process.env.REFRESH_TOKEN_SECRET_KEY
   },
   db: {
     host: process.env.DB_HOST,
@@ -15,7 +17,9 @@ const dev = {
 
 const pro = {
   app: {
-    port: process.env.PRODUCTION_APP_PORT
+    port: process.env.PRODUCTION_APP_PORT,
+    acess_token_secret: process.env.ACCESS_TOKEN_SECRET_KEY,
+    refresh_token_secret: process.env.REFRESH_TOKEN_SECRET_KEY
   },
   db: {
     host: process.env.DB_HOST || 'localhost',

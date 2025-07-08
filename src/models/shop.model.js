@@ -36,6 +36,14 @@ var shopSchema = new mongoose.Schema(
       type: Schema.Types.Boolean,
       default: false
     },
+    refreshToken: {
+      type: String,
+      require: true
+    },
+    refreshTokensUsed: {
+      type: Array,
+      default: []
+    },
     roels: {
       type: Array,
       default: []

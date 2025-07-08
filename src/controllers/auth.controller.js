@@ -18,6 +18,14 @@ class AuthController {
       metadata
     }).sendResponse(res)
   }
+
+  refreshNewAccessToken = async (req, res, next) => {
+    const metadata = await authService.refreshNewAccessToken(req.headers.authorization.split(' ')[1])
+    new ApiSuccess({
+      statusCode: StatusCodes.OK,
+      metadata
+    }).sendResponse(res)
+  }
 }
 
 export default new AuthController()
