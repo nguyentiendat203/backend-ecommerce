@@ -26,6 +26,13 @@ class AuthController {
       metadata
     }).sendResponse(res)
   }
+
+  logout = async (req, res, next) => {
+    new ApiSuccess({
+      statusCode: StatusCodes.OK,
+      metadata: await authService.logout(req.user)
+    }).sendResponse(res)
+  }
 }
 
 export default new AuthController()

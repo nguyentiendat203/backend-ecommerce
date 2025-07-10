@@ -61,6 +61,11 @@ class AuthService {
 
     return { accessToken }
   }
+
+  static logout = async (user) => {
+    await shopModel.findByIdAndUpdate(user._id, { refreshToken: null })
+    return { message: 'Logout successfully' }
+  }
 }
 
 export default AuthService
