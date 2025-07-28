@@ -31,4 +31,5 @@ jobs:
         echo "${{ secrets.ENV_FILE }}" > .env
       shell: bash
     - run: npm ci
-    
+    - run: npm run build
+        
