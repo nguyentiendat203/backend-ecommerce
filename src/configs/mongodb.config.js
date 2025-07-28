@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import env from './env.config'
 
-const mongodbURI = `mongodb://${env.db.user}:${env.db.password}@${env.db.host}:${env.db.port}/${env.db.name}?authSource=admin`
+const mongodbURI = `mongodb://${env.db.user}:${env.db.password}@${env.db.host}:${env.db.port}/${env.db.name}`
 class Database {
   // static instance = null
 
